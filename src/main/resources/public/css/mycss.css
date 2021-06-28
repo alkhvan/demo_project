@@ -7,10 +7,34 @@ body {
 	float: left; /* Обтекание картинки по левому краю */
     padding-left: 10px; /* Отступ слева */
     padding-bottom: 10px; /* Отступ снизу */
+    margin: 0 ;
+    padding: 0;
 }
 .flex {
    margin: 10;
    width: 16,6%;
    display: flex;
    justify-content:space-between;
+}
+.menu {
+	width: 255%;
+	display: table;
+}
+.menu ul {
+	display: table-row;
+}
+.menu li {
+	display: table-cell;
+	background: #FFFFFF;
+	color:#000000;
+}
+.menu ul li:hover, .menu a:hover {
+	background: #666;
+}
+.menu li a {
+	display: block;
+	padding: 8px 15px;
+	color:#000000;
+	text-align: center;
+	text-decoration: none; /* Отменяем подчеркивание у ссылки */
 }
