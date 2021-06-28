@@ -1,0 +1,38 @@
+@charset "UTF-8";
+/* Style of body */
+body {
+    color:#FFFFFF;
+	background-color: 	#FF1493;
+	font-size: 150%; /* Размер шрифта */
+	float: left; /* Обтекание картинки по левому краю */
+    padding-left: 10px; /* Отступ слева */
+    padding-bottom: 10px; /* Отступ снизу */
+    margin: 0 ;
+    padding: 0;
+}
+table  {
+    width: 300px; /* Ширина таблицы */
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+   }
+   th  {
+    padding: 3px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+    background-color: #C0C0C0;
+   }
+   td  {
+       padding: 3px; /* Поля вокруг содержимого таблицы */
+       border: 1px solid black; /* Параметры рамки */
+       background-color: #DCDCDC;
+      }
+td.col1 { background: #C0C0C0; }
+td.col2 { background: #DCDCDC; }
+
+img {
+
+  width: 90px;
+  height: 111px;
+}
+
+h2 { text-align: center; }
+h4 { text-align: center; }
+h5 { text-align: center; }

@@ -1,10 +1,11 @@
 <!DOCTYPE HTML>
-<html lang='de' xmlns:th="http://www.thymeleaf.org">
+<html lang='de'>
 <head>
 
-    <link rel="stylesheet" href="css/mycss.css">
+    <link rel="stylesheet" type="text/css" href="css/mycss.css">
     <link rel="shortcut icon" href="images/t_logo.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="myscript.js" type="module"></script>
     <meta charset="UTF-8">
     <p><img src="images/icon.png" width="90" height="70" alt="Иллюстрация" align="middle" align="left" vspace="5" hspace="5">
         LIFE IS FOR SHARING.</p>
@@ -16,31 +17,29 @@
 </header>
 <div class="menu">
 <ul>
-    <li><a href="#">Company</a></li>
-    <li><a href="#">Corporate Responsibility</a></li>
-    <li><a href="#">Media</a></li>
-    <li><a href="#">Careers</a></li>
-    <li><a href="#">Blog.Telekom</a></li>
+    <li><a href="https://www.telekom.com/en/company">Company</a></li>
+    <li><a href="https://www.telekom.com/en/corporate-responsibility">Corporate Responsibility</a></li>
+    <li><a href="https://www.telekom.com/en/media">Media</a></li>
+    <li><a href="https://www.telekom.com/en/careers">Careers</a></li>
+    <li><a href="https://www.telekom.com/en/blog">Blog.Telekom</a></li>
     <li><a href="#"><img src="images/search.png" width="45" height="45" alt="Иллюстрация" align="middle" align="left" vspace="5" hspace="5">Search</a></li>
 </ul>
 </div>
 <br><br><br><br><br>
-<div id="all">
+<div class="all">
     <input checked type="radio" name="respond" id="desktop">
         <article id="slider">
             <input checked type="radio" name="slider" id="switch1">
             <input type="radio" name="slider" id="switch2">
             <input type="radio" name="slider" id="switch3">
             <input type="radio" name="slider" id="switch4">
-        </article>
-    </div>
 <div id="slides">
     <div id="overflow">
         <div class="image">
-            <article> <img src="images/5G.png"></article>
-            <article> <img src="images/innovation.png"></article>
-            <article> <img src="images/3.png"></article>
-            <article> <img src="images/4.png"></article>
+            <article> <img src="images/5G.png" width="900" height="800"></article>
+            <article> <img src="images/innovation.png" width="900" height="800"></article>
+            <article> <img src="images/3.png" width="900" height="800" ></article>
+            <article> <img src="images/4.png" width="900" height="800" ></article>
         </div>
     </div>
 
@@ -57,6 +56,49 @@
     <label for="switch3"></label>
     <label for="switch4"></label>
 </div>
+ </article>
+</div>
 
+<form align="right" class="form" id="joinForm">
+    <div class="container">
+
+        <h1>Join us!</h1>
+
+        <label for="salutation">Salutation</label><br>
+        <select name="salutation" id="salutation">
+
+            <option value="-">-</option>
+            <option value="Mr">Mr</option>
+            <option value="Mrs">Mrs</option>
+            <option value="Miss">Miss</option>
+            <option value="-">-</option>
+        </select> <br>
+
+        <label for="name">Name</label> <br>
+        <input id="name" type="text" name="name" placeholder="Enter Your Name"> <br>
+
+        <label for="surname">Surname</label> <br>
+        <input id="surname" type="text" placeholder="Enter Your Surname" name="surname"> <br>
+
+        <label for="email">E-Mail</label> <br>
+        <input type="email" id="email" name="email" placeholder="Enter Your Email"> <br>
+
+        <label for="birthdate">Birthday</label> <br>
+        <input id="birthdate" type="date" placeholder="Enter Your birthday" name="birthdate"> <br>
+
+        <label for="id0012">ID:</label> <br> <input id="id0012" type="text" placeholder="ID for UPDATE or DELETE"
+                                                    name="id0012"><br>
+
+        <br>
+        <p>By joining us you agree to our <a href="https://iot.telekom.com/en/privacy-policy#bottom">Terms & Privacy</a>.</p>
+        <a href="form.html#bottom" class="btn" type="submit" id="button">Submit</a>
+        <input type="submit" id="buttonremove" value="Delete">
+        <input type="submit" id="buttonupdate" value="Update">
+        <input type="submit" id="buttonclear" value="Clear the table">
+
+
+
+    </div>
+</form>
  </body>
 </html>
