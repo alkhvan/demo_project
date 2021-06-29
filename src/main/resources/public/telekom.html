@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html lang='de' xmlns:th="http://www.thymeleaf.org">
+<body lang='de' xmlns:th="http://www.thymeleaf.org">
 <head>
 
     <link rel="stylesheet" type="text/css" href="css/mycss.css">
@@ -11,7 +11,7 @@
         LIFE IS FOR SHARING.</p>
     <title>Demo day - HTML site example</title>
 </head>
-<body>
+
 <header>
 
 </header>
@@ -27,6 +27,7 @@
 </div>
 <br><br><br><br><br>
 <div class="all">
+<!--    <img src="images/telekom.png" class="imgleftT" id="leftTimg" align="left" >-->
     <input checked type="radio" name="respond" id="desktop">
         <article id="slider">
             <input checked type="radio" name="slider" id="switch1">
@@ -58,9 +59,11 @@
 </div>
  </article>
 </div>
+<br>
 
-<form align="right" class="form" id="joinForm">
-    <div class="container">
+
+<!--<table align="right" class="form" id="joinForm">-->
+    <div class="container" id="joinForm">
 
         <h1>Join us!</h1>
 
@@ -102,26 +105,30 @@
 
 
     </div>
-</form>
-<hr>
-<div class="person">
-    <table class="table table-dark" align="center" id="tid001">
-        <thead class="hideit" id="thid001">
-        <img src="images/end.png" id="endimg" width="900" height="800">
-        <tr>
-            <th class="col1"><h5>Nr</h5></th>
-            <th class="col1"><h5>ID</h5></th>
-            <th class="col1"><h5>Photo</h5></th>
-            <th class="col1"><h5>Salutation</h5></th>
-            <th class="col1"><h5>Name</h5></th>
-            <th class="col1"><h5>Surname</h5></th>
-            <th class="col1"><h5>Email</h5></th>
-            <th class="col1"><h5>Birthday</h5></th>
-        </tr>
-        </thead>
-        <tbody id="tbid001">
-        </tbody>
-    </table>
-</div>
+
+
+
+    <div class="person">
+        <table style = "width: 100%;" class="table table-dark"  id="tid001">
+            <thead class="hideit" id="thid001">
+            <tr>
+                <th class="col1"><h5>Nr</h5></th>
+                <th class="col1"><h5>ID</h5></th>
+                <th class="col1"><h5>Photo</h5></th>
+                <th class="col1"><h5>Salutation</h5></th>
+                <th class="col1"><h5>Name</h5></th>
+                <th class="col1"><h5>Surname</h5></th>
+                <th class="col1"><h5>Email</h5></th>
+                <th class="col1"><h5>Birthday</h5></th>
+            </tr>
+            </thead>
+            <tbody id="tbid001">
+            </tbody>
+
+
+</table>
+    </div>
+
+
  </body>
 </html>

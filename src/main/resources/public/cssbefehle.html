@@ -5,21 +5,22 @@
     <link rel="stylesheet" type="text/css" href="css/cssform.css">
     <link rel="shortcut icon" href="images/t_logo.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="myscript.js" type="module"></script>
+
     <meta charset="UTF-8">
     <p><img src="images/icon.png" id="frontimg" class="frontimage" width="90" height="50" alt="Иллюстрация" align="middle" align="left" vspace="5" hspace="5">
         LIFE IS FOR SHARING.</p>
     <title>Demo day - Cascading Style Sheets</title>
 </head>
 <body>
-
+<table style = "width: 100%;" class="tablecss" align="center" id="cssid002">
+    <td valign="top">
 <p><font size="6" color="black" face="Arial">Mit CSS werden Gestaltungsanweisungen erstellt, die vor allem im Zusammenspiel mit HTML eingesetzt werden. <br>
     HTML legt die Struktur einer Webseite fest und CSS ist für das optische Erscheinungsbild verantwortlich. <br><br>
     <font size="5" color="black" face="Arial">
     Um ein Stylesheet, also eine CSS-Datei, zu laden, wird folgender Befehl verwendet:<br><br>
     </font>
 
-    <font size="5" color="silver" face="Arial"> &lt;link type="text/css" rel="stylesheet" href="/ordner/template.css"&gt; </font>
+    <font size="5" color="#FF1493" face="Arial"> &lt;link type="text/css" rel="stylesheet" href="/ordner/template.css"&gt; </font>
     <br>
     <br>
     Man kann in einem HTML-Dokument einfach CSS einbinden, indem man ein style-Tag öffnet.
@@ -31,17 +32,19 @@
     CSS-Frameworks sind stets beliebt bei Web-Entwicklern, denn sie sparen viel Zeit.
     <br>
     <br>
-    <font size="5" color="silver" face="Arial">
+    <font size="5" color="#FF1493" face="Arial">
     Beispiel:
         <br> <br></font>
     <b>Skeleton</b><br>
-    <font size="5" color="silver" face="Arial">
+    <font size="5" color="#FF1493" face="Arial">
     Das Framework Skeleton umfasst nur zwei CSS-Dateien und ist nicht modular aufgebaut.
     Die Datei normalize.css übernimmt die Resets, in der Datei skeleton.css sind alle Formatierungen und Elemente des Frameworks definiert.
     </font>
 </font>
 </p>
+    </td>
 
+<td>
 <br>
 <div class="htmlbasis">
     <h2 align="center">Cascading Style Sheets Befehle Übersicht</h2>
@@ -55,7 +58,7 @@
         </thead>
         <tbody id="tbid002" bgcolor="808080">
         <tr bgcolor="#474A51">
-            <th class="col2"><h5>Schrift</h5></th>
+            <th class="col2" colspan="3"><h5>Schrift</h5></th>
             <th class="col2"><h5></h5></th>
             <th class="col2"><h5></h5></th>
         </tr>
@@ -75,7 +78,7 @@
             <th class="col2"><h5>red, green, white usw. oder HTML Farbangabe</h5></th>
         </tr>
         <tr bgcolor="#474A51">
-            <th class="col2"><h5>Außenabstand/Innenabstand (Box)</h5></th>
+            <th class="col2" colspan="3"><h5>Außenabstand/Innenabstand (Box)</h5></th>
             <th class="col2"><h5></h5></th>
             <th class="col2"><h5></h5></th>
         </tr>
@@ -95,7 +98,7 @@
             <th class="col2"><h5>numerischer Wert in px, mm oder cm oder relative Angaben</h5></th>
         </tr>
         <tr bgcolor="#474A51">
-            <th class="col2"><h5>Bilder</h5></th>
+            <th class="col2" colspan="3"><h5>Bilder</h5></th>
             <th class="col2"><h5></h5></th>
             <th class="col2"><h5></h5></th>
         </tr>
@@ -110,7 +113,7 @@
             <th class="col2"><h5>none, URL</h5></th>
         </tr>
         <tr bgcolor="#474A51">
-            <th class="col2"><h5>Textgestaltung</h5></th>
+            <th class="col2" colspan="3"><h5>Textgestaltung</h5></th>
             <th class="col2"><h5></h5></th>
             <th class="col2"><h5></h5></th>
         </tr>
@@ -130,7 +133,7 @@
             <th class="col2"><h5>numerischer Wert in pt (Punkt) mm oder cm</h5></th>
         </tr>
         <tr bgcolor="#474A51">
-            <th class="col2"><h5>Ränder</h5></th>
+            <th class="col2" colspan="3"><h5>Ränder</h5></th>
             <th class="col2"><h5></h5></th>
             <th class="col2"><h5></h5></th>
         </tr>
@@ -152,6 +155,8 @@
         </tbody>
     </table>
 </div>
+</td>
+</table>
 
 
 <br><br><br><br><br>
