@@ -1,0 +1,161 @@
+@charset "UTF-8";
+/* Style of body */
+body {
+    color:#FFFFFF;
+
+	background: #CF3476;
+	font-size: 150%; /* Размер шрифта */
+	float: left; /* Обтекание картинки по левому краю */
+    padding-left: 10px; /* Отступ слева */
+    padding-bottom: 10px; /* Отступ снизу */
+    margin: 0 ;
+    padding: 0;
+    background-attachment: fixed; /* Фон страницы фиксируется */
+    		background-repeat: no-repeat; /* Изображение повторяется по горизонтали */
+}
+
+
+table  {
+    width: 1000px; /* Ширина таблицы */
+    hight:15px;
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+      }
+
+
+
+img {
+
+  width: 230px;
+  height: 150px;
+}
+#cssimg{
+        position: relative;
+                	width: 230px;
+                    height: 130px;
+                    margin-left: 20px ;
+                    margin-right: 50px ;
+                    float: left;
+       }
+
+
+#frontimg { /*положение первой картинки*/
+    position: relative;
+	width: 60px;
+    height: 50px;
+}
+#htmlbody{ /*положение первой картинки*/
+             position: relative;
+         	width: 600px;
+             height: 500px;
+             margin-left: 20px ;
+             margin-right: 50px ;
+             float: table;
+         }
+td.col1 { background: #C0C0C0; }
+td.col2 { background: #DCDCDC; }
+
+#tbid001{
+
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+
+
+   th  {
+    padding: 1px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+
+   }
+   td  {
+       padding: 1px; /* Поля вокруг содержимого таблицы */
+       border: 1px solid black; /* Параметры рамки */
+       background-color: #DCDCDC;
+
+      }
+
+}
+
+#tbid002{
+
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+
+}
+   th  {
+    padding: 1px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+
+   }
+   td  {
+       padding: 1px; /* Поля вокруг содержимого таблицы */
+       border: 1px solid black; /* Параметры рамки */
+       background-color: #DCDCDC;
+
+      }
+
+
+#rectangle {
+    width: 220px;
+    height: 120px;
+    background: #320B35;
+}
+
+#pacman1 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 70px solid transparent;
+    border-top: 70px solid #ffde00;
+    border-left: 70px solid #ffde00;
+    border-bottom: 70px solid #ffde00;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+}
+#pacman {
+    width: 0;
+    height: 0;
+    border-right: 70px solid transparent;
+    border-top: 70px solid #ffde00;
+    border-left: 70px solid #ffde00;
+    border-bottom: 70px solid #ffde00;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+}
+
+h2 { text-align: center; }
+h4 { text-align: center; }
+h5 { text-align: center; }
+
+.agenda {
+	width: 100%;
+	display: table;
+	position: fixed;
+   // top:0;
+   // left: 0;
+}
+.agenda ul {
+	display: table-row;
+}
+.agenda li {
+	display: table-cell;
+	background: #FFFFFF;
+	color:#000000;
+}
+.agenda ul li:hover, .menu a:hover {
+	background: #666;
+}
+.agenda li a {
+	display: block;
+	padding: 8px 15px;
+	color:#000000;
+	text-align: center;
+	text-decoration: none; /* Отменяем подчеркивание у ссылки */
+}
+
+#myContainer {
+    width: 1000px;
+    height: 600px;
+    position: relative;
+    background: "#3A75C4";
+}

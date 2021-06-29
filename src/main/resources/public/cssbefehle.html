@@ -1,0 +1,161 @@
+<!DOCTYPE HTML>
+<html lang='de'>
+<head>
+
+    <link rel="stylesheet" type="text/css" href="css/cssform.css">
+    <link rel="shortcut icon" href="images/t_logo.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="myscript.js" type="module"></script>
+    <meta charset="UTF-8">
+    <p><img src="images/icon.png" id="frontimg" class="frontimage" width="90" height="50" alt="Иллюстрация" align="middle" align="left" vspace="5" hspace="5">
+        LIFE IS FOR SHARING.</p>
+    <title>Demo day - Cascading Style Sheets</title>
+</head>
+<body>
+
+<p><font size="6" color="black" face="Arial">Mit CSS werden Gestaltungsanweisungen erstellt, die vor allem im Zusammenspiel mit HTML eingesetzt werden. <br>
+    HTML legt die Struktur einer Webseite fest und CSS ist für das optische Erscheinungsbild verantwortlich. <br><br>
+    <font size="5" color="black" face="Arial">
+    Um ein Stylesheet, also eine CSS-Datei, zu laden, wird folgender Befehl verwendet:<br><br>
+    </font>
+
+    <font size="5" color="silver" face="Arial"> &lt;link type="text/css" rel="stylesheet" href="/ordner/template.css"&gt; </font>
+    <br>
+    <br>
+    Man kann in einem HTML-Dokument einfach CSS einbinden, indem man ein style-Tag öffnet.
+    Dies umschließt die obere Regel mit &lt;style&gt; CSS HIER &lt;/style&gt;.
+    <br>
+    <br ><img src="images/cssfiles.png" id="cssimg" width="300" height="500" alt="Иллюстрация" align="left" vspace="5" hspace="5" float="left">
+    Man kann auch die <b>CSS-Datei erstellen</b> oder die <b>CSS-Frameworks verwenden</b>.
+    Die CSS-Dateien liegen meist im Ordner "stylesheets", "styles" oder "css". <br>
+    CSS-Frameworks sind stets beliebt bei Web-Entwicklern, denn sie sparen viel Zeit.
+    <br>
+    <br>
+    <font size="5" color="silver" face="Arial">
+    Beispiel:
+        <br> <br></font>
+    <b>Skeleton</b><br>
+    <font size="5" color="silver" face="Arial">
+    Das Framework Skeleton umfasst nur zwei CSS-Dateien und ist nicht modular aufgebaut.
+    Die Datei normalize.css übernimmt die Resets, in der Datei skeleton.css sind alle Formatierungen und Elemente des Frameworks definiert.
+    </font>
+</font>
+</p>
+
+<br>
+<div class="htmlbasis">
+    <h2 align="center">Cascading Style Sheets Befehle Übersicht</h2>
+    <table class="tablehtml" align="center" id="htmlid002">
+        <thead class="hideit" id="thtmlid002">
+        <tr bgcolor="#2F353B">
+            <th ><h4><b>TAG</b></h4></th>
+            <th ><h4><b>BEDEUTUNG</b></h4></th>
+            <th ><h4><b>weitere mögliche Angaben</b></h4></th>
+        </tr>
+        </thead>
+        <tbody id="tbid002" bgcolor="808080">
+        <tr bgcolor="#474A51">
+            <th class="col2"><h5>Schrift</h5></th>
+            <th class="col2"><h5></h5></th>
+            <th class="col2"><h5></h5></th>
+        </tr>
+        <tr>
+            <th class="col2"><h5>font-family</h5></th>
+            <th class="col2"><h5>Schriftart</h5></th>
+            <th class="col2"><h5>Arial, Times New Roman, etc.</h5></th>
+        </tr>
+        <tr>
+            <th class="col2"><h5>font-size</h5></th>
+            <th class="col2"><h5>Schriftgröße</h5></th>
+            <th class="col2"><h5>numerischer Wert in pt (Punkt) mm oder cm</h5></th>
+        </tr>
+        <tr>
+            <th class="col2"><h5>color</h5></th>
+            <th class="col2"><h5>Schriftfarbe</h5></th>
+            <th class="col2"><h5>red, green, white usw. oder HTML Farbangabe</h5></th>
+        </tr>
+        <tr bgcolor="#474A51">
+            <th class="col2"><h5>Außenabstand/Innenabstand (Box)</h5></th>
+            <th class="col2"><h5></h5></th>
+            <th class="col2"><h5></h5></th>
+        </tr>
+        <tr>
+            <th class="col2"><h5>padding</h5></th>
+            <th class="col2"><h5>Kurzschreibweise für Innenabstand bei Box-Modell</h5></th>
+            <th class="col2"><h5>numerischer Wert in px oder relative Angaben</h5></th>
+        </tr>
+        <tr>
+            <th class="col2"><h5>margin</h5></th>
+            <th class="col2"><h5>Kurzschreibweise für Außenabstand bei Box-Modell</h5></th>
+            <th class="col2"><h5>numerischer Wert in px, mm oder cm oder relative Angaben</h5></th>
+        </tr>
+        <tr>
+            <th class="col2"><h5>margin-left(right/bottom/top)</h5></th>
+            <th class="col2"><h5>absoluter Abstand zum Seitenrand</h5></th>
+            <th class="col2"><h5>numerischer Wert in px, mm oder cm oder relative Angaben</h5></th>
+        </tr>
+        <tr bgcolor="#474A51">
+            <th class="col2"><h5>Bilder</h5></th>
+            <th class="col2"><h5></h5></th>
+            <th class="col2"><h5></h5></th>
+        </tr>
+        <tr>
+            <th class="col2"><h5>background</h5></th>
+            <th class="col2"><h5>Hintergrundfarbe</h5></th>
+            <th class="col2"><h5>red, green, white usw. oder HTML Farbangabe</h5></th>
+        </tr>
+        <tr>
+            <th class="col2"><h5>background-image</h5></th>
+            <th class="col2"><h5>Hintergrundbild</h5></th>
+            <th class="col2"><h5>none, URL</h5></th>
+        </tr>
+        <tr bgcolor="#474A51">
+            <th class="col2"><h5>Textgestaltung</h5></th>
+            <th class="col2"><h5></h5></th>
+            <th class="col2"><h5></h5></th>
+        </tr>
+        <tr>
+            <th class="col2"><h5>text-align</h5></th>
+            <th class="col2"><h5>Textausrichtung</h5></th>
+            <th class="col2"><h5>left, right, center, justify (Blocksatz)</h5></th>
+        </tr>
+        <tr>
+            <th class="col2"><h5>text-decoration</h5></th>
+            <th class="col2"><h5>Textgestaltung</h5></th>
+            <th class="col2"><h5>underline, overline, line-through, blink</h5></th>
+        </tr>
+        <tr>
+            <th class="col2"><h5>word-spacing</h5></th>
+            <th class="col2"><h5>Wortabstand</h5></th>
+            <th class="col2"><h5>numerischer Wert in pt (Punkt) mm oder cm</h5></th>
+        </tr>
+        <tr bgcolor="#474A51">
+            <th class="col2"><h5>Ränder</h5></th>
+            <th class="col2"><h5></h5></th>
+            <th class="col2"><h5></h5></th>
+        </tr>
+        <tr>
+            <th class="col2"><h5>border-top(bottom/left/right)-width</h5></th>
+            <th class="col2"><h5>Dicke der Rahmenlinie</h5></th>
+            <th class="col2"><h5>thin, medium, thick oder num. Wert</h5></th>
+        </tr>
+        <tr>
+            <th class="col2"><h5>border-style</h5></th>
+            <th class="col2"><h5>Rahmentyp</h5></th>
+            <th class="col2"><h5>none, dotted, dashed, solid, double, groove, ridge, inset, outset</h5></th>
+        </tr>
+        <tr>
+            <th class="col2"><h5>padding-top(bottom/left/right)</h5></th>
+            <th class="col2"><h5>Tabellenabstand</h5></th>
+            <th class="col2"><h5>Prozent oder num. Wert.</h5></th>
+        </tr>
+        </tbody>
+    </table>
+</div>
+
+
+<br><br><br><br><br>
+<p>    <a href="telekom.html#bottom" class="btn">Beispiel HTML Seite</a></p>
+<br>
+<a href="anderebefehle.html#bottom" class="btn">Zurück.</a>
+</body>

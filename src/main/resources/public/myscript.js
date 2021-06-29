@@ -4,8 +4,8 @@ function getJson(meta) {
 }
 
 function getTxtFromJsonUndPackInsHTML(myjson) {
-//	var tabelle = document.getElementById("tid001");
-	var t_header = document.getElementById("thid001");
+	//var tabelle = document.getElementById("tid001");
+	//var t_header = document.getElementById("thid001");
     var t_body = document.getElementById("tbid001");
 	var i = 0;
 	for (var laufvariable of myjson.personen) {
@@ -14,13 +14,13 @@ function getTxtFromJsonUndPackInsHTML(myjson) {
     		"<tr>"
     			+ `<td> ${++i}</td>`
     			+ "<td>" + laufvariable.id + "</td>"
-    		//	+ "<td>" + laufvariable.id + "</td>"
     			+ "<td><img src='" + getImg(laufvariable.salutation) + "'></td>"
     			+ "<td>" + laufvariable.salutation + "</td>"
     			+ "<td>" + laufvariable.name + "</td>"
     			+ "<td>" + laufvariable.surname +"</td>"
-    			+ "<td>" + laufvariable.birthdate +"</td>"
     			+ "<td>" + laufvariable.email + "</td>"
+    			+ "<td>" + laufvariable.birthdate +"</td>"
+
     		+ "</tr>")
 }
 }
@@ -52,7 +52,7 @@ function createPerson(event) {   // bei event-click
 	var jsonDataString = `{"id":"${id}","salutation":"${salutation}","name":"${name}","surname":"${surname}","email":"${email}","birthdate":"${date}"}`;
 	console.log(jsonDataString);
 
-	fetch("http://localhost:63342/json/person", {
+	fetch("http://localhost:8080/json/person", {
 		method: 'POST',
 		body: jsonDataString,
 		headers: {
@@ -62,15 +62,11 @@ function createPerson(event) {   // bei event-click
 	refreshClick();
 }
 
-
-
-
-
 function removePerson (event){
 event.preventDefault();
 var id = document.getElementById("id0012").value;
     console.log(id);
-    fetch(`http://localhost:63342/json/person/${id}`, {
+    fetch(`http://localhost:8080/json/person/${id}`, {
         		method: 'DELETE'
         	});
 refreshClick();
@@ -87,7 +83,7 @@ event.preventDefault();
 
 	var jsonDataString = `{"id":"${id}","salutation":"${salutation}","name":"${name}","surname":"${surname}","email":"${email}","birthdate":"${date}"}`;
 	console.log(jsonDataString);
-    fetch(`http://localhost:63342/json/person`, {
+    fetch(`http://localhost:8080/json/person`, {
     		method: 'PUT' ,
     		body: jsonDataString,
     		headers: {
@@ -99,7 +95,7 @@ refreshClick();
 
 function removeAllPerson (event){
     event.preventDefault();
-    fetch(`http://localhost:63342/json/person/deleteAll`, {
+    fetch(`http://localhost:8080/json/person/deleteAll`, {
             		method: 'DELETE'
             	});
     refreshClick();
@@ -123,7 +119,7 @@ var input = document.getElementById("buttonclear");
 input.addEventListener("click",removeAllPerson);
 
 function refreshPersons(){
-fetch("http://localhost:63342/json/persons/all")
+fetch("/json/persons/all")
 	.then(getJson)
 	.then(getTxtFromJsonUndPackInsHTML)
 }
@@ -135,3 +131,5 @@ function refreshClick() {
 	document.getElementById("tbid001").innerHTML="";
 	refreshPersons();
 }
+
+

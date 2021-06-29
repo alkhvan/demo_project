@@ -1,72 +1,56 @@
 package de.telekom.sea.demo;
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 
 @Service
 public class PersonService {
-    private PersonRepositoryDB personRepository;
+    private PersonRepository personRepository;
 
     @Autowired
-    public PersonService(PersonRepositoryDB personRepositoryDB) {
+    public PersonService(PersonRepository personRepository) {
         super();
         System.out.println("PersonService is created: " + this.toString());
-        System.out.println("PersonRepository: " + personRepositoryDB.toString());
-        this.personRepository = personRepositoryDB;
+        System.out.println("PersonRepository: " + personRepository.toString());
+        this.personRepository = personRepository;
     }
 
-    public Long size() {
-        return personRepository.count();
+    public int size() {
+        return personRepository.size();
     }
 
     public Personen getAll() {
         Personen personen = new Personen();
-        for (Person p : personRepository.findAll()) {
+        for (Person p : personRepository.getAll()) {
             personen.getPersonen().add(p);
         }
         return personen;
     }
 
-    public Person get(Long id) {
-        if (personRepository.findById(id).isPresent()) {
-            return personRepository.findById(id).get();
-        } else {
-            return null;
-        }
+    public Person get(int id) {
+        return new Person();
     }
 
     public Person add(Person person) {
-        personRepository.save(person);
+        personRepository.add(person);
         System.out.println("Person was added");
         return person;
     }
 
-    public Person delete(Long id) {
+    public Person delete(int id) {
         System.out.println("Person is removed.");
-        personRepository.deleteById(id);
+        personRepository.delete(id);
         return null;
     }
 
-    public Person update(Person person) {
-        personRepository.save(person);
+    public Person update(Integer id,Person person) {
         System.out.println("Person was changed!");
-        return null;
+        return personRepository.update(id,person);
+
+    }
+    public void removeAll() {
+        personRepository.removeAll();
     }
 
-    public Person clear() {
-        personRepository.deleteAll();
-        System.out.println("Cleanup the list completely");
-        return null;
-    }
-
-    public Personen selectPersonen(String surname) {
-        Personen ps = new Personen();
-        for (Person p : personRepository.selectPersonen()) {
-            ps.getPersonen().add(p);
-        }
-        return ps;
-    }
 }

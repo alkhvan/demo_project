@@ -2,7 +2,7 @@
 /* Style of body */
 body {
     color:#FFFFFF;
-	background-color: 	#FF1493;
+	background-color: 	#CF3476;
 	font-size: 150%; /* Размер шрифта */
 	float: left; /* Обтекание картинки по левому краю */
     padding-left: 10px; /* Отступ слева */
@@ -48,7 +48,7 @@ body {
       top: -800px;
       left: 100;
       float: right;
-      margin-right: -1100px;
+      margin-right: -700px;
       // margin-left: 1500px;
 }
 
@@ -198,3 +198,40 @@ label, a{ /*при наведении на стрелки или переклю�
     text-decoration: none; /* Убираем подчёркивание */
     border-radius: 3px; /* Скругляем уголки */
    }
+
+#frontimg1 { /*положение первой картинки*/
+    position: relative;
+	width: 60px;
+    height: 50px;
+}
+
+table  {
+    width: 1000px; /* Ширина таблицы */
+    hight:15px;
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+    border: 4px double white; /* Параметры границы */
+    outline: 2px solid #000; /* Чёрная рамка */
+    background: #FFD1DC; /* Цвет фона */
+
+      }
+ th  {
+    padding: 1px; /* Поля вокруг содержимого таблицы */
+    border: 1px solid black; /* Параметры рамки */
+    color:#000000;
+    padding-left: 50px; /* Отступ слева */
+   }
+   td  {
+       padding: 1px; /* Поля вокруг содержимого таблицы */
+       border: 1px solid black; /* Параметры рамки */
+       background-color: #DCDCDC;
+
+      }
+
+#endimg{
+                   position: relative;
+               	width: 300px;
+                   height: 300px;
+                   margin-left: 20px ;
+                   margin-right: 50px ;
+                   float: table;
+               }

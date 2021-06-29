@@ -1,31 +1,21 @@
 package de.telekom.sea.demo;
 
-import javax.persistence.*;
-
-@Entity
-@Table (name="persons")
 public class Person {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long ID;
-    @Column
+
+    private int ID;
     private String salutation;
-    @Column
     private String name;
-    @Column
     private String surname;
-    @Column
     private String email;
-    @Column
     private String birthdate;
 
 
 
-    public Person(Long ID,String name, String surname, String salutation, String email,String birthdate) {
+    public Person(int ID, String salutation,String name, String surname, String email,String birthdate) {
         this.ID = ID;
+        this.salutation = salutation;
         this.name = name;
         this.surname = surname;
-        this.salutation = salutation;
         this.email = email;
         this.birthdate = birthdate;
 
@@ -38,6 +28,22 @@ public class Person {
 
 
 
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+
+    public String getSalutation() {
+        return salutation;
+    }
+
+    public void setSalutation(String salutation) {
+        this.salutation = salutation;
+    }
     public String getName() {
         return name;
     }
@@ -52,14 +58,6 @@ public class Person {
 
     public void setSurname(String surname) {
         this.surname = surname;
-    }
-
-    public String getSalutation() {
-        return salutation;
-    }
-
-    public void setSalutation(String salutation) {
-        this.salutation = salutation;
     }
 
 
@@ -79,12 +77,5 @@ public class Person {
         this.birthdate = birthdate;
     }
 
-    public Long getID() {
-        return ID;
-    }
-
-    public void setID(Long ID) {
-        this.ID = ID;
-    }
 
 }

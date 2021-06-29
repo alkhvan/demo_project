@@ -1,8 +1,6 @@
 package de.telekom.sea.demo;
 
 
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -10,7 +8,6 @@ import org.springframework.web.bind.annotation.*;
 public class PersonRestController {
 
     private PersonService personService;
-
 
     @Autowired
     public PersonRestController(PersonService personService) {
@@ -26,12 +23,12 @@ public class PersonRestController {
     }
 
     @GetMapping("/json/persons/size")
-    public Long getSize() {
+    public int getSize() {
         return personService.size();
     }
 
     @GetMapping("/json/person/{id}")	// {id}
-    public Person getPerson(@PathVariable("id") Long id) {
+    public Person getPerson(@PathVariable("id") int id) {
         return personService.get(id);
     }
 
@@ -41,19 +38,17 @@ public class PersonRestController {
     }
 
     @DeleteMapping("/json/person/{id}")
-    public Person deletePerson(@PathVariable("id") Long id) {
+    public Person deletePerson(@PathVariable("id") int id) {
         return personService.delete(id);
     }
 
     @PutMapping("/json/person")
-    public Person updatePerson(@RequestBody Person person) {
-        return personService.update(person);
+    public Person updatePerson(@PathVariable("id") int id ,@RequestBody Person person) {
+        return personService.update(id,person);
     }
 
-    @DeleteMapping("/json/person/deleteAll")
-    public Person deleteAllPerson() {
-        return personService.clear();
+    @DeleteMapping("/json/person/all")
+    public void removeAllPersons() {personService.removeAll();
     }
-
 
 }
