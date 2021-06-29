@@ -1,0 +1,54 @@
+@charset "UTF-8";
+/* Style of body */
+body {
+    color:#FFFFFF;
+
+	background: #CF3476;
+	font-size: 150%; /* Размер шрифта */
+	float: left; /* Обтекание картинки по левому краю */
+    padding-left: 10px; /* Отступ слева */
+    padding-bottom: 10px; /* Отступ снизу */
+    margin: 20 px ;
+    padding: 0;
+    background-attachment: fixed; /* Фон страницы фиксируется */
+    		background-repeat: no-repeat; /* Изображение повторяется по горизонтали */
+}
+
+.bJS1 img{ /*положение первой картинки*/
+    position: relative;
+	width: 500px;
+    height: 400px;
+}
+
+.bJS2 img{ /*положение первой картинки*/
+    position: relative;
+	width: 400px;
+    height: 150px;
+}
+
+#pacman1 {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-right: 70px solid transparent;
+    border-top: 70px solid #ffde00;
+    border-left: 70px solid #ffde00;
+    border-bottom: 70px solid #ffde00;
+    border-top-left-radius: 70px;
+    border-top-right-radius: 70px;
+    border-bottom-left-radius: 70px;
+    border-bottom-right-radius: 70px;
+}
+#myContainer {
+    width: 1000px;
+    height: 600px;
+    position: relative;
+    background: "#3A75C4";
+}
+
+table  {
+    width: 1000px; /* Ширина таблицы */
+    hight:15px;
+    border-collapse: collapse; /* Убираем двойные линии между ячейками */
+    background-color: #DCDCDC;
+      }
