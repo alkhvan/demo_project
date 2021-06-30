@@ -39,10 +39,11 @@ public class PersonRestController {
 
     @DeleteMapping("/json/person/{id}")
     public Person deletePerson(@PathVariable("id") int id) {
+
         return personService.delete(id);
     }
 
-    @PutMapping("/json/person")
+    @PutMapping("/json/person/{id}")
     public Person updatePerson(@PathVariable("id") int id ,@RequestBody Person person) {
         return personService.update(id,person);
     }

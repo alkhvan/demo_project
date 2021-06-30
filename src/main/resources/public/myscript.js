@@ -13,7 +13,7 @@ function getTxtFromJsonUndPackInsHTML(myjson) {
     		t_body.insertAdjacentHTML("beforeend",
     		"<tr>"
     			+ `<td> ${++i}</td>`
-    			+ "<td>" + laufvariable.id + "</td>"
+    		//	+ "<td>" + laufvariable.id + "</td>"
     			+ "<td><img src='" + getImg(laufvariable.salutation) + "'></td>"
     			+ "<td>" + laufvariable.salutation + "</td>"
     			+ "<td>" + laufvariable.name + "</td>"
@@ -64,38 +64,44 @@ function createPerson(event) {   // bei event-click
 
 function removePerson (event){
 event.preventDefault();
-var id = document.getElementById("id0012").value;
-    console.log(id);
-    fetch(`http://localhost:8080/json/person/${id}`, {
-        		method: 'DELETE'
-        	});
-refreshClick();
-	}
+console.log("click");
+	var id = document.getElementById("id0012").value;
+	var jsonDataString = `{"id":"${id}"}`;
+    console.log(jsonDataString);
+	fetch(`/json/person/${id}`, {
+		method: 'DELETE'
+	});
+	refreshClick();
+}
+
+
 
 function updatePerson (event){
-event.preventDefault();
-    var id = document.getElementById("id0012").value;
+event.preventDefault();      // verhindert dass das event von Browser verwendet wird (verhindert GET-Request)
+	console.log("click");
+	var id = document.getElementById("id0012").value;
 	var salutation = document.getElementById("salutation").value;
 	var name = document.getElementById("name").value;
 	var surname = document.getElementById("surname").value;
 	var email = document.getElementById("email").value;
 	var date = document.getElementById("birthdate").value;
 
+
 	var jsonDataString = `{"id":"${id}","salutation":"${salutation}","name":"${name}","surname":"${surname}","email":"${email}","birthdate":"${date}"}`;
 	console.log(jsonDataString);
-    fetch(`http://localhost:8080/json/person`, {
-    		method: 'PUT' ,
+
+	fetch(`/json/person/${id}`, {
+    		method: 'PUT',
     		body: jsonDataString,
-    		headers: {
-    			'Content-Type': 'application/json'
-    			}
-    		});
-refreshClick();
-	}
+    		headers: { 'Content-Type': 'application/json' }
+    	});
+	refreshClick();
+}
+
 
 function removeAllPerson (event){
     event.preventDefault();
-    fetch(`http://localhost:8080/json/person/deleteAll`, {
+    fetch("/json/person/all", {
             		method: 'DELETE'
             	});
     refreshClick();
